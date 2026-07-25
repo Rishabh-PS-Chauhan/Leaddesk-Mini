@@ -41,12 +41,14 @@ export function LeadForm() {
         return;
       }
 
-      setServerError(result.message);
+      if (result.status === "error") {
+        setServerError(result.message);
 
-      if (result.fieldErrors) {
-        for (const [field, messages] of Object.entries(result.fieldErrors)) {
-          if (messages?.[0]) {
-            setError(field as keyof LeadFormValues, { type: "server", message: messages[0] });
+        if (result.fieldErrors) {
+          for (const [field, messages] of Object.entries(result.fieldErrors)) {
+            if (messages?.[0]) {
+              setError(field as keyof LeadFormValues, { type: "server", message: messages[0] });
+            }
           }
         }
       }

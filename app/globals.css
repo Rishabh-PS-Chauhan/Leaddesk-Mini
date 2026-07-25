@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Design tokens for LeadDesk Mini.
+  These mirror the semantic classes used throughout the components
+  (bg-ink, text-accent, etc). Defined here for the base layer below,
+  and in tailwind.config.ts for use as utility classes everywhere else.
+*/
+@theme {
+  --color-ink: #14181f;
+  --color-surface: #1c222c;
+  --color-border-hairline: #2a313d;
+  --color-ivory: #f3f1ec;
+  --color-muted: #9aa3b2;
+  --color-muted-dim: #5b6472;
+  --color-accent: #e8a33d;
+  --color-accent-hover: #f0b45c;
+  --color-status-new: #e8a33d;
+  --color-status-contacted: #4fb6a8;
+  --color-status-closed: #6fcf97;
+  --color-error-bg: #2a1a1a;
+  --color-error-border: #4a2b2b;
+  --color-error-text: #f0a3a3;
+
+  --font-display: var(--font-display), "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-body: var(--font-body), "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border-hairline;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-ink text-ivory;
+  }
+
+  /* Visible keyboard focus everywhere — never suppressed for aesthetics */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

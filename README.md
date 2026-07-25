@@ -9,7 +9,7 @@ internship task.
 
 **Admin test credentials:**
 - Email: `rishabh.pschauhan@gmail.com`
-- Password: `8febRishabh!`
+- Password: `8febYash!`
 
 ---
 

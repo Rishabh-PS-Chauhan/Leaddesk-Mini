@@ -4,12 +4,12 @@ A small lead-capture product with a public intake form and an authenticated
 admin dashboard, built for the Digital Heroes Full Stack Development
 internship task.
 
-**Live URL:** `[PASTE DEPLOYED URL HERE]`
-**Admin login:** `[PASTE DEPLOYED URL]/admin/login`
+**Live URL:** `https://leaddesk-mini-black.vercel.app`
+**Admin login:** `https://leaddesk-mini-black.vercel.app/admin/login`
 
 **Admin test credentials:**
-- Email: `[PASTE TEST ADMIN EMAIL]`
-- Password: `[PASTE TEST ADMIN PASSWORD]`
+- Email: `rishabh.pschauhan@gmail.com`
+- Password: `8febRishabh!`
 
 ---
 
